@@ -3,10 +3,8 @@ fetchAllPosts()
 async function fetchAllPosts(){
     try{
         let resp = await fetch('https://blog-api-assignment.up.railway.app/posts')
-        // if (!Response.ok){
-        //     throw new error="Could not fetch data"
-        // }
 
+        
         let posts = await resp.json()
         console.log(posts)
 
