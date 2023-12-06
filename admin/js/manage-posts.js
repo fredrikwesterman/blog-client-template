@@ -19,7 +19,7 @@ async function fetchAllPosts(){
                     <td>${post.tags}</td>
                     <td>
                         <a href="" class="update-post">Update</a><br>
-                        <a href="" class="delete-post">Delete</a>
+                        <a href="" class="delete-post" data-id=${post._id}>Delete</a>
                     </td>
                 </tr>
             `
@@ -33,11 +33,10 @@ async function fetchAllPosts(){
         for(let btn of deleteBtns){
             btn.addEventListener('click', async function(e){
                 e.preventDefault()
-                console.log("tjena du har tryckt!")
-                await fetch('https://blog-api-assignment.up.railway.app/posts/' + e.target.dataset.id, {
+                let resp = await fetch('https://blog-api-assignment.up.railway.app/posts/' + e.target.dataset.id, {
                     method: "DELETE"
                 })
-
+                console.log(resp)
                 e.target.parentNode.parentNode.remove()
             })
         }
