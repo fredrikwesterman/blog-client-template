@@ -12,12 +12,12 @@ async function getBlogpost(){
         console.log(post)
 
         document.getElementById('post').innerHTML = `
-        <a href="index.html" id="back-to-posts">Back to posts</a> 
-        <h2>${post.title}</h2>
-        <p>${post.author}</p>
-        <i>${post.date}</i>
-        <p>${post.content}</p>
-        <p>${post.tags}</p>
+            <a href="index.html" id="back-to-posts">Back to posts</a> 
+            <h2>${post.title}</h2>
+            <p>${post.author}</p>
+            <i>${post.date}</i>
+            <p>${post.content}</p>
+            <p>${post.tags}</p>
         `
         
     } catch(error) {
