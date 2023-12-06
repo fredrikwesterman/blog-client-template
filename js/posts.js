@@ -14,11 +14,11 @@ async function fetchAllPosts(){
             
             postListHtml += `
             <h2>${post.title}</h2>
-            <p>${post.author}</p>
-            <i>${post.date}</i>
+            <p>${post.author} | <i>${post.date}</i></p>
+            <p>Tags: ${post.tags}</p>
             <p>${post.content}...</p>
             <a href="post.html?id=${post._id}" id="read-more">Read More</a> 
-            <p>${post.tags}</p>
+            <hr>
             `
         }
 
