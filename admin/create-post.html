@@ -2,12 +2,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Create new post</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>This page is required for the VG grade</h1>
 
+<div class="container">   
+
+    <form id="form">
+        <label for="title">Title</label><br>
+        <input type="text" name="title"><br>
+
+        <label for="author">Author</label><br>
+        <input type="text" name="author"><br>
+
+        <label for="tags">Tags</label><br>
+        <select name="tags" id="tags" size="4" multiple>
+            <option value="warm">Warm</option>
+            <option value="cold">cold</option>
+            <option value="sunny">sunny</option>
+            <option value="cloudy">cloudy</option>
+        </select><br>
+
+        <label for="content">Content</label><br>
+        <textarea name="content" id="content" cols="30" rows="5"></textarea><br>
+
+        <label for="submit"></label><br>
+        <input type="submit" name="submit">
+    </form>
+
+</div> 
     <script src="js/create-post.js"></script>
 </body>
 </html>
