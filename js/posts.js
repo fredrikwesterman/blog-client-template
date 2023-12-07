@@ -11,15 +11,12 @@ async function fetchAllPosts(){
 
         let postListHtml = ''
         for(let post of posts){
-            
             postListHtml += `
             <h2>${post.title}</h2>
             <p>${post.author} | <i>${post.date}</i></p>
             <p>Tags: ${post.tags}</p>
-            <p>${post.content}...</p>
-            <a href="post.html?id=${post._id}" id="read-more">Read More</a> 
-            <hr>
-            `
+            <p>${post.content.slice(0, 100)}... <a href="post.html?id=${post._id}" id="read-more">Read More</a> </p> 
+            <hr>`
         }
 
         document.getElementById('blog-list').innerHTML = postListHtml
