@@ -6,13 +6,14 @@ async function createPost(e){
 
         let formData = new FormData(e.target)
         console.log(formData)
-        console.log(formData.get('id'))
-        let data = {"content": formData.get('content'),
-                    "title": formData.get('title'),
-                    "author": formData.get('author'),
-                    "tags": formData.get('tags')}
+
+        let data = {"content": formData.get("content"),
+                    "title": formData.get("title"),
+                    "author": formData.get("author"),
+                    "tags": formData.getAll("tags")}
         console.log(data)
-        
+
+
         await fetch('https://blog-api-assignment.up.railway.app/posts', {
             method: "POST",
             headers: {
