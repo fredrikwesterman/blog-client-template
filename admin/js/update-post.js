@@ -30,10 +30,10 @@ async function updatePost(e){
 
         let formData = new FormData(e.target)
         let data = {
-            "content": formData.get('content'),
-            "title": formData.get('title'),
-            "author": formData.get('author'),
-            "tags": formData.get('tags')
+            "content": formData.get("content"),
+            "title": formData.get("title"),
+            "author": formData.get("author"),
+            "tags": formData.getAll("tags")
         }
 
         await fetch('https://blog-api-assignment.up.railway.app/posts/' + postId,{
