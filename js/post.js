@@ -14,10 +14,9 @@ async function getBlogpost(){
         document.getElementById('post').innerHTML = `
             <a href="index.html" id="back-to-posts">Back to posts</a> 
             <h2>${post.title}</h2>
-            <p>${post.author}</p>
-            <i>${post.date}</i>
+            <p> Author: ${post.author} | <i>${post.date}</i></p>
             <p>${post.content}</p>
-            <p>${post.tags}</p>
+            <p>Tags: ${post.tags}</p>
         `
         
     } catch(error) {
