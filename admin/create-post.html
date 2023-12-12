@@ -8,38 +8,43 @@
 <body>
 
 <div class="container">   
+    <header>
+        <a href="index.html" class="admin-page">Back to Admin Page</a>
+        <h1>🦆 Create Post 🦆</h1>
+    </header>
 
-    <a href="index.html">Back to Admin Page</a>
-    <hr>
+    <section>
+        <form id="form" class="update-create">
+            <label for="title" class="label">Title</label><br>
+            <input type="text" name="title" id="post-title"><br>
 
-    <h1>Create Post</h1>
-    <hr>
+            <label for="author" class="label">Author</label><br>
+            <input type="text" name="author" id="post-author"><br>
 
-    <form id="form">
-        <label for="title">Title</label><br>
-        <input type="text" name="title"><br>
+            <label for="content" class="label">Content</label><br>
+            <textarea name="content" id="post-content" cols="57" rows="10"></textarea><br>
 
-        <label for="author">Author</label><br>
-        <input type="text" name="author"><br>
+            <label for="tags" class="label">Tags</label><br>
+            <select name="tags" class="post-tags" size="6" multiple >
+                <option value="Warm">Warm</option>
+                <option value="Sunny">sunny</option>
+                <option value="Cold">cold</option>
+                <option value="Cloudy">cloudy</option>
+                <option value="Happy">Happy</option>
+                <option value="Sad">Sad</option>
+            </select><br>
 
-        <label for="tags">Tags</label><br>
-        <select name="tags" id="post-tags" size="6" multiple>
-            <option value="warm">Warm</option>
-            <option value="sunny">sunny</option>
-            <option value="cold">cold</option>
-            <option value="cloudy">cloudy</option>
-            <option value="happy">Happy</option>
-            <option value="sad">Sad</option>
-        </select><br>
+            <label for="submit"></label><br>
+            <input type="submit" name="submit" class="submit-btn">
+        </form>
+    </section>
+</div>
 
-        <label for="content">Content</label><br>
-        <textarea name="content" id="post-content" cols="30" rows="5"></textarea><br>
+<footer>
+    <p>&copy; Fredrik Westerman 2023</p>
+    <h1><a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBLbrfE7M-7nwoxZLCUw30Ze26aTrW_KIjug&usqp=CAU" id="the-duck">🦆</a></h1>
+</footer>
 
-        <label for="submit"></label><br>
-        <input type="submit" name="submit">
-    </form>
-
-</div> 
-    <script src="js/create-post.js"></script>
+<script src="js/create-post.js"></script>
 </body>
 </html>
