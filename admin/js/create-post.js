@@ -10,7 +10,7 @@ async function createPost(e){
         let data = {"content": formData.get("content"),
                     "title": formData.get("title"),
                     "author": formData.get("author"),
-                    "tags": formData.getAll("tags")}
+                    "tags": formData.getAll("tags").join(', ')}
         console.log(data)
 
 

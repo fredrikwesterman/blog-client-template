@@ -1,5 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+
+:root{
+    --box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: beige;
+    box-sizing: border-box;
+    background-image: linear-gradient(rgb(247, 247, 192), white);
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 #table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 10px;
+    font-family: 'open-sans', sans-serif;
+    background-color: white;
+}
+
+table thead td{
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: white;
+}
+
+tbody tr:nth-child('odd'){
+    background-color: blue;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: blue;
+}
+
+.link-style {
+    
+    color: white;
+    background-color: black;
+    border-radius: 10px 10px 0 0;
+    padding: 5px;
+}
+
+a:hover {
+    color:burlywood;
+}
+
+.delete-post {
+    color: red;
+}
+.delete-post:hover {
+    color: rgba(237, 79, 79, 0.689);
+}
+
+.admin-page,
+.read-more,
+.back-to-posts,
+.delete-post,
+.update-post,
+#create-post {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+.update-create{
+    box-shadow: var(--box-shadow);
+    border-radius: 20px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    background-image: linear-gradient(to bottom right, white, rgb(247, 247, 192));
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+textarea {
+    border-radius: 10px;
+}
+
+input {
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    width: 58%;
+    align-self: center;
+    border: none;
+    height: 40px;
+    font-size: 18px;
+}
+
+select {
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    width: 10%;
+}
+
+.label {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.post-tags {
+    width: 50%;
+    text-align: center;
+    font-family: 'open-sans', sans-serif;
+}
+
+.submit-btn {
+    border: none;
+    box-shadow: var(--box-shadow);
+    font-size: 18px;
+    background-color: rgb(72, 72, 240);
+    color: whitesmoke;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: rgb(129, 129, 233);
+}
+
+footer {
+    text-align: center;
 }

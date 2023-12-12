@@ -7,15 +7,15 @@ async function fetchAllPosts(){
         let posts = await resp.json()
         console.log(posts)
 
-
         let postListTable = ''
         for(let post of posts){
+            let postDate = new Date(post.date)
             
             postListTable += `
             <tr>
                     <td>${post.title}</td>
                     <td>${post.author}</td>
-                    <td>${post.date}</td>
+                    <td>${postDate.getFullYear()}-${postDate.getMonth()+1}-${postDate.getDate()}, ${postDate.toLocaleTimeString()}</td>
                     <td>${post.tags}</td>
                     <td>
                         <a href="update-post.html?data-id=${post._id}" class="update-post">Update</a><br>
