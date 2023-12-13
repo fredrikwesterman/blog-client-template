@@ -14,9 +14,9 @@ async function fetchAllPosts(){
             postListTable += `
             <tr>
                     <td>${post.title}</td>
-                    <td>${post.author}</td>
+                    <td class="table-author">${post.author}</td>
                     <td>${postDate.getFullYear()}-${postDate.getMonth()+1}-${postDate.getDate()}, ${postDate.toLocaleTimeString()}</td>
-                    <td>${post.tags}</td>
+                    <td class="table-tags">${post.tags}</td>
                     <td>
                         <a href="update-post.html?data-id=${post._id}" class="update-post">Update</a><br>
                         <a href="" class="delete-post" data-id=${post._id}>Delete</a>

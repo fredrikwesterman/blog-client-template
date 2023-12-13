@@ -17,6 +17,7 @@ p {
     font-family: 'Open Sans', sans-serif;
 }
 
+
 #table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -29,10 +30,6 @@ table thead td{
     font-family: 'Poppins', sans-serif;
     background-color: black;
     color: white;
-}
-
-tbody tr:nth-child('odd'){
-    background-color: blue;
 }
 
 a {
@@ -92,6 +89,7 @@ h2 {
 
 textarea {
     border-radius: 10px;
+    width: 58%;
 }
 
 input {
@@ -137,4 +135,20 @@ select {
 
 footer {
     text-align: center;
+}
+
+@media (max-width: 1367px) {
+    .update-create{
+        width: 75%;
+    }
+}
+
+@media (max-width: 767px) {
+    .update-create{
+        width: 90%;
+    }
+
+    .table-tags {
+        display: none;
+    }
 }
